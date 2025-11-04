@@ -101,3 +101,27 @@ const merged2 = new Map([...first, ...second, [1, "un"]]);
 console.log(merged.get(1)); // un
 console.log(merged.get(2)); // dos
 console.log(merged.get(3)); // three
+
+//Implementing a WeakMap-like class with a .clear() method
+class ClearableWeakMap {
+  #wm;
+  constructor(init) {
+    this.#wm = new WeakMap(init);
+  }
+  clear() {
+    this.#wm = new WeakMap();
+  }
+  delete(k) {
+    return this.#wm.delete(k);
+  }
+  get(k) {
+    return this.#wm.get(k);
+  }
+  has(k) {
+    return this.#wm.has(k);
+  }
+  set(k, v) {
+    this.#wm.set(k, v);
+    return this;
+  }
+}
