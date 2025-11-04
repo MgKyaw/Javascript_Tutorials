@@ -31,3 +31,26 @@ contacts.get("Jessie"); // {phone: "213-555-1234", address: "123 N 1st Ave"}
 contacts.delete("Raymond"); // false
 contacts.delete("Jessie"); // true
 console.log(contacts.size); // 1
+
+/////////// Using the Map object
+const myMap = new Map();
+
+const keyString = "a string";
+const keyObj = {};
+const keyFunc = () => {};
+
+// setting the values
+myMap.set(keyString, "value associated with 'a string'");
+myMap.set(keyObj, "value associated with keyObj");
+myMap.set(keyFunc, "value associated with keyFunc");
+
+console.log(myMap.size); // 3
+
+// getting the values
+console.log(myMap.get(keyString)); // "value associated with 'a string'"
+console.log(myMap.get(keyObj)); // "value associated with keyObj"
+console.log(myMap.get(keyFunc)); // "value associated with keyFunc"
+
+console.log(myMap.get("a string")); // "value associated with 'a string'", because keyString === 'a string'
+console.log(myMap.get({})); // undefined, because keyObj !== {}
+console.log(myMap.get(() => {})); // undefined, because keyFunc !== () => {}
