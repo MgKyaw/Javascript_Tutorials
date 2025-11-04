@@ -54,3 +54,11 @@ console.log(myMap.get(keyFunc)); // "value associated with keyFunc"
 console.log(myMap.get("a string")); // "value associated with 'a string'", because keyString === 'a string'
 console.log(myMap.get({})); // undefined, because keyObj !== {}
 console.log(myMap.get(() => {})); // undefined, because keyFunc !== () => {}
+
+/////////// Cloning
+const original = new Map([[1, "one"]]);
+
+const clone = new Map(original);
+
+console.log(clone.get(1)); // one
+console.log(original === clone); // false (useful for shallow comparison)
