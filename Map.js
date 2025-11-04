@@ -62,3 +62,42 @@ const clone = new Map(original);
 
 console.log(clone.get(1)); // one
 console.log(original === clone); // false (useful for shallow comparison)
+
+/////////// Maps can be merged, maintaining key uniqueness:
+const first = new Map([
+  [1, "one"],
+  [2, "two"],
+  [3, "three"],
+]);
+
+const second = new Map([
+  [1, "uno"],
+  [2, "dos"],
+]);
+
+// Merge two maps. The last repeated key wins.
+// Spread syntax essentially converts a Map to an Array
+const merged = new Map([...first, ...second]);
+
+console.log(merged.get(1)); // uno
+console.log(merged.get(2)); // dos
+console.log(merged.get(3)); // three
+
+/////////// Maps can be merged with Arrays, too:
+const first2 = new Map([
+  [1, "one"],
+  [2, "two"],
+  [3, "three"],
+]);
+
+const second2 = new Map([
+  [1, "uno"],
+  [2, "dos"],
+]);
+
+// Merge maps with an array. The last repeated key wins.
+const merged2 = new Map([...first, ...second, [1, "un"]]);
+
+console.log(merged.get(1)); // un
+console.log(merged.get(2)); // dos
+console.log(merged.get(3)); // three
