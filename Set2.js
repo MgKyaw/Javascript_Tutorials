@@ -134,3 +134,13 @@ union(setA, setC); // returns Set {1, 2, 3, 4, 5, 6}
 intersection(setA, setC); // returns Set {3, 4}
 symmetricDifference(setA, setC); // returns Set {1, 2, 5, 6}
 difference(setA, setC); // returns Set {1, 2}
+
+const myArray = ["value1", "value2", "value3"];
+
+// Use the regular Set constructor to transform an Array into a Set
+const mySet = new Set(myArray);
+
+mySet.has("value1"); // returns true
+
+// Use the spread syntax to transform a set into an Array.
+console.log([...mySet]); // Will show you exactly the same Array as myArray
