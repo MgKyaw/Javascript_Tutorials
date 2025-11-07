@@ -144,3 +144,8 @@ mySet.has("value1"); // returns true
 
 // Use the spread syntax to transform a set into an Array.
 console.log([...mySet]); // Will show you exactly the same Array as myArray
+
+// Use to remove duplicate elements from an array
+const numbers = [2, 13, 4, 4, 2, 13, 13, 4, 4, 5, 5, 6, 6, 7, 5, 32, 13, 4, 5];
+
+console.log([...new Set(numbers)]); // [2, 13, 4, 5, 6, 7, 32]
