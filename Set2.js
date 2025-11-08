@@ -150,8 +150,16 @@ const numbers = [2, 13, 4, 4, 2, 13, 13, 4, 4, 5, 5, 6, 6, 7, 5, 32, 13, 4, 5];
 
 console.log([...new Set(numbers)]); // [2, 13, 4, 5, 6, 7, 32]
 
+//// Relation to Strings
 // Case sensitive (set will contain "F" and "f")
 new Set("Firefox"); // Set(7) [ "F", "i", "r", "e", "f", "o", "x" ]
 
 // Duplicate omission ("f" occurs twice in the string but set will contain only one)
 new Set("firefox"); // Set(6) [ "f", "i", "r", "e", "o", "x" ]
+
+//// Uniqueness of a list of values
+const array = Array.from(document.querySelectorAll("[id]")).map((e) => e.id);
+
+const set = new Set(array);
+console.assert(set.size === array.length);
+
