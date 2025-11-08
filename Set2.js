@@ -150,6 +150,7 @@ const numbers = [2, 13, 4, 4, 2, 13, 13, 4, 4, 5, 5, 6, 6, 7, 5, 32, 13, 4, 5];
 
 console.log([...new Set(numbers)]); // [2, 13, 4, 5, 6, 7, 32]
 
+//// Relation to Strings
 // Case sensitive (set will contain "F" and "f")
 new Set("Firefox"); // Set(7) [ "F", "i", "r", "e", "f", "o", "x" ]
 
