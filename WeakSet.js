@@ -33,13 +33,13 @@ function execRecursively(fn, subject, _refs = new WeakSet()) {
   }
 }
 
-const foo = {
+const foo2 = {
   foo: "Foo",
   bar: {
     bar: "Bar",
   },
 };
 
-foo.bar.baz = foo; // Circular reference!
-execRecursively((obj) => console.log(obj), foo);
+foo2.bar.baz = foo2; // Circular reference!
+execRecursively((obj) => console.log(obj), foo2);
 
