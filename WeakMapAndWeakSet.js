@@ -40,3 +40,12 @@ weakMap.set(obj, "ok"); // works fine (object key)
 // can't use a string as the key
 weakMap.set("test", "Whoops"); // Error, because "test" is not an object
 
+//// Overwrite in WeakMap
+let john4 = { name: "John" };
+
+let weakMap2 = new WeakMap();
+weakMap.set(john4, "...");
+
+john4 = null; // overwrite the reference
+
+// john is removed from memory!
