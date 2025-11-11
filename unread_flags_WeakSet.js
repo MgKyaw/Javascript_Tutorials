@@ -20,3 +20,9 @@ alert("Read message 0: " + readMessages.has(messages[0])); // true
 
 messages.shift();
 // now readMessages has 1 element (technically memory may be cleaned later)
+
+// Use WeakMap to store the read messages with date time
+let readMap = new WeakMap();
+
+readMap.set(messages[0], new Date(2017, 1, 1));
+
