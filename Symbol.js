@@ -7,3 +7,12 @@ let statuses = {
 };
 // complete a task
 task.setStatus(statuses.COMPLETED);
+
+
+//// Using a symbol as the computed property name of an object
+let status = Symbol('status');
+let task = {
+    [status]: statuses.OPEN,
+    description: 'Learn ES6 Symbol'
+};
+console.log(task);
