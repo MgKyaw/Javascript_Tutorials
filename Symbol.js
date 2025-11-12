@@ -16,3 +16,11 @@ let task = {
     description: 'Learn ES6 Symbol'
 };
 console.log(task);
+
+
+//// Get all properties
+console.log(Object.keys(task)); // ["description"]
+
+console.log(Object.getOwnPropertyNames(task)); // ["description"]
+
+console.log(Object.getOwnPropertySymbols(task)); //[Symbol(status)]
