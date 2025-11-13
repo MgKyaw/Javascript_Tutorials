@@ -17,3 +17,6 @@ const hugeBin = BigInt(
 );
 // 9007199254740991n
 
+typeof 1n === "bigint"; // true
+typeof BigInt("1") === "bigint"; // true
+
