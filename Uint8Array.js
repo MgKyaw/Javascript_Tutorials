@@ -54,3 +54,7 @@ const int16View = new Int16Array(buffer);
 for (let i = 0; i < int16View.length; i++) {
   console.log(`Entry ${i}: ${int16View[i]}`);
 }
+
+// Int16Array  |   0  |  0   |   2  |  0   |   4  |  0   |   6  |  0   |
+// Int32Array  |      0      |      2      |      4      |      6      |
+// ArrayBuffer | 00 00 00 00 | 02 00 00 00 | 04 00 00 00 | 06 00 00 00 |
