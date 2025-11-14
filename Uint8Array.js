@@ -33,3 +33,6 @@ function toBinary(
 console.log(toBinary(1.1)); // 3f f1 99 99 99 99 99 9a
 console.log(toBinary(1.1, { littleEndian: true })); // 9a 99 99 99 99 99 f1 3f
 console.log(toBinary(20, { type: "Int8", radix: 2 })); // 00010100
+
+//// Examples
+const buffer = new ArrayBuffer(16);
