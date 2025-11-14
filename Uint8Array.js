@@ -33,3 +33,32 @@ function toBinary(
 console.log(toBinary(1.1)); // 3f f1 99 99 99 99 99 9a
 console.log(toBinary(1.1, { littleEndian: true })); // 9a 99 99 99 99 99 f1 3f
 console.log(toBinary(20, { type: "Int8", radix: 2 })); // 00010100
+
+//// Examples
+const buffer = new ArrayBuffer(16);
+
+if (buffer.byteLength === 16) {
+  console.log("Yes, it's 16 bytes.");
+} else {
+  console.log("Oh no, it's the wrong size!");
+}
+
+const int32View = new Int32Array(buffer);
+
+for (let i = 0; i < int32View.length; i++) {
+  int32View[i] = i * 2;
+}
+
+const int16View = new Int16Array(buffer);
+
+for (let i = 0; i < int16View.length; i++) {
+  console.log(`Entry ${i}: ${int16View[i]}`);
+}
+
+// Int16Array  |   0  |  0   |   2  |  0   |   4  |  0   |   6  |  0   |
+// Int32Array  |      0      |      2      |      4      |      6      |
+// ArrayBuffer | 00 00 00 00 | 02 00 00 00 | 04 00 00 00 | 06 00 00 00 |
+
+int16View[0] = 32;
+console.log(`Entry 0 in the 32-bit array is now ${int32View[0]}`);
+
