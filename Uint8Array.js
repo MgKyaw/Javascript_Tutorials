@@ -36,3 +36,9 @@ console.log(toBinary(20, { type: "Int8", radix: 2 })); // 00010100
 
 //// Examples
 const buffer = new ArrayBuffer(16);
+
+if (buffer.byteLength === 16) {
+  console.log("Yes, it's 16 bytes.");
+} else {
+  console.log("Oh no, it's the wrong size!");
+}
