@@ -58,3 +58,7 @@ for (let i = 0; i < int16View.length; i++) {
 // Int16Array  |   0  |  0   |   2  |  0   |   4  |  0   |   6  |  0   |
 // Int32Array  |      0      |      2      |      4      |      6      |
 // ArrayBuffer | 00 00 00 00 | 02 00 00 00 | 04 00 00 00 | 06 00 00 00 |
+
+int16View[0] = 32;
+console.log(`Entry 0 in the 32-bit array is now ${int32View[0]}`);
+
