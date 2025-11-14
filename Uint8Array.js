@@ -42,3 +42,9 @@ if (buffer.byteLength === 16) {
 } else {
   console.log("Oh no, it's the wrong size!");
 }
+
+const int32View = new Int32Array(buffer);
+
+for (let i = 0; i < int32View.length; i++) {
+  int32View[i] = i * 2;
+}
