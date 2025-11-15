@@ -10,3 +10,6 @@ typeof size; // returns "number"
 typeof foo; // returns "object"
 typeof today; // returns "object"
 typeof doesntExist; // returns "undefined"
+
+typeof true; // returns "boolean"
+typeof null; // returns "object"
