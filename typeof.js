@@ -13,3 +13,6 @@ typeof doesntExist; // returns "undefined"
 
 typeof true; // returns "boolean"
 typeof null; // returns "object"
+
+typeof 62; // returns "number"
+typeof "Hello world"; // returns "string"
