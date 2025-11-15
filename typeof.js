@@ -16,3 +16,7 @@ typeof null; // returns "object"
 
 typeof 62; // returns "number"
 typeof "Hello world"; // returns "string"
+
+typeof document.lastModified; // returns "string"
+typeof window.length; // returns "number"
+typeof Math.LN2; // returns "number"
