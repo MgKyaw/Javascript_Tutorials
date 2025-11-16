@@ -51,3 +51,20 @@ const myCar = { make: "Honda", model: "Accord", year: 1998 };
 "make" in myCar; // returns true
 "model" in myCar; // returns true
 
+//// Grouping operator
+const a = 1;
+const b = 2;
+const c = 3;
+
+// default precedence
+a + b * c; // 7
+// evaluated by default like this
+a + (b * c); // 7
+
+// now overriding precedence
+// addition before multiplication
+(a + b) * c; // 9
+
+// which is equivalent to
+a * c + b * c; // 9
+
