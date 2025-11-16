@@ -31,3 +31,48 @@ typeof Math; // returns "object"
 typeof Option; // returns "function"
 typeof String; // returns "function"
 
+//// Relational operators
+// Arrays
+const trees = ["redwood", "bay", "cedar", "oak", "maple"];
+0 in trees; // returns true
+3 in trees; // returns true
+6 in trees; // returns false
+"bay" in trees; // returns false
+// (you must specify the index number, not the value at that index)
+"length" in trees; // returns true (length is an Array property)
+
+// built-in objects
+"PI" in Math; // returns true
+const myString = new String("coral");
+"length" in myString; // returns true
+
+// Custom objects
+const myCar = { make: "Honda", model: "Accord", year: 1998 };
+"make" in myCar; // returns true
+"model" in myCar; // returns true
+
+//// Grouping operator
+const a = 1;
+const b = 2;
+const c = 3;
+
+// default precedence
+a + b * c; // 7
+// evaluated by default like this
+a + (b * c); // 7
+
+// now overriding precedence
+// addition before multiplication
+(a + b) * c; // 9
+
+// which is equivalent to
+a * c + b * c; // 9
+
+//// new operator
+const objectName = new ObjectType(param1, param2, /* …, */ paramN);
+
+//// super operator
+// The super keyword is used to call functions on an object's parent. It is useful with classes to call the parent constructor, for example.
+super(args); // calls the parent constructor.
+super.functionOnParent(args);
+
