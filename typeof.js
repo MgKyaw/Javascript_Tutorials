@@ -68,3 +68,11 @@ a + (b * c); // 7
 // which is equivalent to
 a * c + b * c; // 9
 
+//// new operator
+const objectName = new ObjectType(param1, param2, /* …, */ paramN);
+
+//// super operator
+// The super keyword is used to call functions on an object's parent. It is useful with classes to call the parent constructor, for example.
+super(args); // calls the parent constructor.
+super.functionOnParent(args);
+
