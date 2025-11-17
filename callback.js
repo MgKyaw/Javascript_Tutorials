@@ -20,3 +20,8 @@ loadScript('/my/script.js', function() {
   newFunction(); // so now it works
 
 });
+
+loadScript('https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.2.0/lodash.js', script => {
+  alert(`Cool, the script ${script.src} is loaded`);
+  alert( _ ); // _ is a function declared in the loaded script
+});
