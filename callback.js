@@ -25,3 +25,13 @@ loadScript('https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.2.0/lodash.js', s
   alert(`Cool, the script ${script.src} is loaded`);
   alert( _ ); // _ is a function declared in the loaded script
 });
+
+loadScript('/my/script.js', function(script) {
+
+  alert(`Cool, the ${script.src} is loaded, let's load one more`);
+
+  loadScript('/my/script2.js', function(script) {
+    alert(`Cool, the second script is loaded`);
+  });
+
+});
