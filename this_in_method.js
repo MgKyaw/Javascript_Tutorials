@@ -5,6 +5,7 @@ let user = {
   sayHi() {
     // "this" is the "current object"
     alert(this.name);
+    // alert(user.name); // "user" instead of "this"
   }
 
 };
