@@ -20,3 +20,15 @@ var p2 = p.then(function(data) {
 });
 
 console.log(p2);
+
+var p = new Promise(function(resolve, reject) {
+    reject("Sorry");
+});
+
+var p2 = p.then(null, function(data) {
+    // callback throws an error
+    throw "Sorry again";
+});
+
+console.log(p2);
+
