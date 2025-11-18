@@ -32,3 +32,15 @@ var p2 = p.then(null, function(data) {
 
 console.log(p2);
 
+var p = new Promise(function(resolve, reject) {
+    resolve("OK");
+});
+
+var p2 = p.then(function(data) {
+    // callback returns a promise
+    return new Promise(function(resolve, reject) {
+        resolve(data + " Bye");
+    });
+});
+
+console.log(p2);
