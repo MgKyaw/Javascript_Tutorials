@@ -10,3 +10,13 @@ var p2 = p.then(function(data) {
 
 console.log(p2);
 
+var p = new Promise(function(resolve, reject) {
+    resolve("OK");
+});
+
+var p2 = p.then(function(data) {
+    // callback throws an error
+    throw "Sorry";
+});
+
+console.log(p2);
