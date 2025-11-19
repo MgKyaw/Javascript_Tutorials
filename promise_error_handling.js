@@ -61,3 +61,16 @@ var p = new Promise(function(resolve, reject) {
 
 p.then(null);
 
+var p = new Promise(function(resolve, reject) {
+    someAsyncOperation();
+}).
+then(function(data) {
+    someOtherAsyncOperation();
+}).
+then(function(data) {
+    someOtherAsyncOperation2();
+}).
+then(null, function(error) {
+    alert("An error occurred: " + error);
+});
+
