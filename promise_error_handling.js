@@ -47,3 +47,11 @@ var p2 = p.then(function(data) {
 
 console.log(p2);        // Promise {<rejected>: "Sorry"}
 
+var p = new Promise(function(resolve, reject) {
+    reject("Oops!");
+});
+
+p.then(null, function(error) {
+    throw error;
+});
+
