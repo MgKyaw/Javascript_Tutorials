@@ -55,3 +55,9 @@ p.then(null, function(error) {
     throw error;
 });
 
+var p = new Promise(function(resolve, reject) {
+    reject("Oops!");
+});
+
+p.then(null);
+
