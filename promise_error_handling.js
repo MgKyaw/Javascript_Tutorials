@@ -24,3 +24,12 @@ p.then(null, function(error) {
     console.log("An error occurred: " + error);
 });
 
+var p = new Promise(function(resolve, reject) {
+    resolve("OK");
+});
+
+var p2 = p.then(function(data) {
+    throw "Sorry";
+});
+
+console.log(p2);        // Promise {<rejected>: "Sorry"}
