@@ -45,3 +45,5 @@ var p2 = p.then(function(data) {
     });
 });
 
+console.log(p2);        // Promise {<rejected>: "Sorry"}
+
