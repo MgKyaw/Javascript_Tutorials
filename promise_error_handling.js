@@ -20,3 +20,7 @@ var p = new Promise(function(resolve, reject) {
     }, 3000);
 });
 
+p.then(null, function(error) {
+    console.log("An error occurred: " + error);
+});
+
