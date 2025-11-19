@@ -33,3 +33,15 @@ var p2 = p.then(function(data) {
 });
 
 console.log(p2);        // Promise {<rejected>: "Sorry"}
+
+var p = new Promise(function(resolve, reject) {
+    resolve("OK");
+});
+
+var p2 = p.then(function(data) {
+    // return a rejected promise
+    return new Promise(function(resolve, reject) {
+        reject("Sorry");
+    });
+});
+
