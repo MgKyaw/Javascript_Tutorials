@@ -1,0 +1,76 @@
+function Promise(executor) {
+    // invoke the executor function
+    try { executor(); }
+    catch(e) { reject(e); }
+}
+
+var p = new Promise(function(resolve, reject) {
+    setTimeout(function() {
+        reject("Sorry");
+    }, 3000);
+});
+
+p.then(null, function(error) {
+    console.log("An error occurred: " + error);
+});
+
+var p = new Promise(function(resolve, reject) {
+    setTimeout(function() {
+        throw "Sorry";
+    }, 3000);
+});
+
+p.then(null, function(error) {
+    console.log("An error occurred: " + error);
+});
+
+var p = new Promise(function(resolve, reject) {
+    resolve("OK");
+});
+
+var p2 = p.then(function(data) {
+    throw "Sorry";
+});
+
+console.log(p2);        // Promise {<rejected>: "Sorry"}
+
+var p = new Promise(function(resolve, reject) {
+    resolve("OK");
+});
+
+var p2 = p.then(function(data) {
+    // return a rejected promise
+    return new Promise(function(resolve, reject) {
+        reject("Sorry");
+    });
+});
+
+console.log(p2);        // Promise {<rejected>: "Sorry"}
+
+var p = new Promise(function(resolve, reject) {
+    reject("Oops!");
+});
+
+p.then(null, function(error) {
+    throw error;
+});
+
+var p = new Promise(function(resolve, reject) {
+    reject("Oops!");
+});
+
+p.then(null);
+
+var p = new Promise(function(resolve, reject) {
+    someAsyncOperation();
+}).
+then(function(data) {
+    someOtherAsyncOperation();
+}).
+then(function(data) {
+    someOtherAsyncOperation2();
+}).
+then(null, function(error) {
+    alert("An error occurred: " + error);
+});
+
