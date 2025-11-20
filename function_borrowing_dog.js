@@ -16,3 +16,11 @@ class Dog {
 let fido = new Dog("Fido", 3, "dachshund")
 fido.tellUsAboutYourSelf()
 //=> 'My name is Fido. I am a dachshund and I am 3 years old.'
+
+fido.tellUsAboutYourSelf.call(sparkles)
+//=>’My name is Sparkles. I am a Siamese and I am 5 years old.’
+fido.tellUsAboutYourSelf.apply(sparkles)
+//=>’My name is Sparkles. I am a Siamese and I am 5 years old.’
+const describeSparkles = fido.tellUsAboutYourSelf.bind(sparkles)
+describeSparkles()
+//=>’My name is Sparkles. I am a Siamese and I am 5 years old.’
