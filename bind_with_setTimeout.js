@@ -6,6 +6,10 @@ class LateBloomer {
     // Declare bloom after a delay of 1 second
     setTimeout(this.declare.bind(this), 1000);
   }
+//   bloom() {
+//     // Declare bloom after a delay of 1 second
+//     setTimeout(() => this.declare(), 1000);
+//   }
   declare() {
     console.log(`I am a beautiful flower with ${this.petalCount} petals!`);
   }
