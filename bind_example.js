@@ -12,3 +12,8 @@ console.log(unboundGetX()); // The function gets invoked at the global scope
 const boundGetX = unboundGetX.bind(module);
 console.log(boundGetX());
 // Expected output: 42
+
+bind(thisArg)
+bind(thisArg, arg1)
+bind(thisArg, arg1, arg2)
+bind(thisArg, arg1, arg2, /* …, */ argN)
