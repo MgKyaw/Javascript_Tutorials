@@ -42,3 +42,9 @@ let say = user.say.bind(user);
 
 say("Hello"); // Hello, John! ("Hello" argument is passed to say)
 say("Bye"); // Bye, John! ("Bye" is passed to say)
+
+for (let key in user) {
+  if (typeof user[key] == 'function') {
+    user[key] = user[key].bind(user);
+  }
+}
