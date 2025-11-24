@@ -15,3 +15,8 @@ let user = {
 // }, 1000);
 
 setTimeout(() => user.sayHi(), 1000); // Hello, John!
+
+// ...the value of user changes within 1 second
+user = {
+  sayHi() { alert("Another user in setTimeout!"); }
+};
