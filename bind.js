@@ -8,3 +8,5 @@ function func() {
 
 let funcUser = func.bind(user);
 funcUser(); // John
+
+funcUser("Hello"); // Hello, John (argument "Hello" is passed, and this=user)
