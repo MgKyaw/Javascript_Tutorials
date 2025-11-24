@@ -7,5 +7,9 @@ let user = {
 
 // setTimeout(user.sayHi, 1000); // Hello, undefined!
 
-let f = user.sayHi;
-setTimeout(f, 1000); // lost user context
+// let f = user.sayHi;
+// setTimeout(f, 1000); // lost user context
+
+setTimeout(function() {
+  user.sayHi(); // Hello, John!
+}, 1000);
