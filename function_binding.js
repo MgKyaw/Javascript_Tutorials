@@ -10,6 +10,8 @@ let user = {
 // let f = user.sayHi;
 // setTimeout(f, 1000); // lost user context
 
-setTimeout(function() {
-  user.sayHi(); // Hello, John!
-}, 1000);
+// setTimeout(function() {
+//   user.sayHi(); // Hello, John!
+// }, 1000);
+
+setTimeout(() => user.sayHi(), 1000); // Hello, John!
