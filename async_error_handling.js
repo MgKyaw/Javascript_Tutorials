@@ -26,3 +26,11 @@ async function f() {
 
 // f() becomes a rejected promise
 f().catch(alert); // TypeError: failed to fetch // (*)
+
+
+//// async/await works well with Promise.all
+// wait for the array of results
+let results = await Promise.all([
+  fetch(url1),
+  fetch(url2)
+]);
