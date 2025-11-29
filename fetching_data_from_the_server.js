@@ -5,3 +5,7 @@ verseChoose.addEventListener("change", () => {
   const verse = verseChoose.value;
   updateDisplay(verse);
 });
+
+function updateDisplay(verse) {
+
+}
