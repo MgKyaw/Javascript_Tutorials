@@ -7,5 +7,6 @@ verseChoose.addEventListener("change", () => {
 });
 
 function updateDisplay(verse) {
-
+    verse = verse.replace(" ", "").toLowerCase();
+    const url = `${verse}.txt`;
 }
