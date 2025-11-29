@@ -1,10 +1,9 @@
-fetch("products.json")
+fetch(url)
   .then((response) => {
     if (!response.ok) {
       throw new Error(`HTTP error: ${response.status}`);
     }
-    return response.json();
+    return response.blob();
   })
-  .then((json) => initialize(json))
+  .then((blob) => showProduct(blob, product))
   .catch((err) => console.error(`Fetch problem: ${err.message}`));
-  
