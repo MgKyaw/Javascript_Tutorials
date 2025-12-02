@@ -18,3 +18,15 @@ const response = await fetch("https://example.org/post", {
   body: JSON.stringify({ username: "example" }),
   // …
 });
+
+// You can supply the body as an instance of any of the following types:
+
+// a string
+// ArrayBuffer
+// TypedArray
+// DataView
+// Blob
+// File
+// URLSearchParams
+// FormData
+// ReadableStream
