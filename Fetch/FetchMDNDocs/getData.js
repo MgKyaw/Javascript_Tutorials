@@ -13,11 +13,11 @@ async function getData() {
   }
 }
 
-const response = await fetch("https://example.org/post", {
-  method: "POST",
-  body: JSON.stringify({ username: "example" }),
-  // …
-});
+// const response = await fetch("https://example.org/post", {
+//   method: "POST",
+//   body: JSON.stringify({ username: "example" }),
+//   // …
+// });
 
 // You can supply the body as an instance of any of the following types:
 
@@ -30,3 +30,13 @@ const response = await fetch("https://example.org/post", {
 // URLSearchParams
 // FormData
 // ReadableStream
+
+const response = await fetch("https://example.org/post", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/x-www-form-urlencoded",
+  },
+  // Automatically converted to "username=example&password=password"
+  body: new URLSearchParams({ username: "example", password: "password" }),
+  // …
+});
