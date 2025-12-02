@@ -12,3 +12,8 @@ async function getData() {
     console.error(error.message);
   }
 }
+
+const response = await fetch("https://example.org/post", {
+  method: "POST",
+  // …
+});
