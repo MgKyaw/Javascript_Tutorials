@@ -64,3 +64,16 @@ const response3 = await fetch("https://example.org/post", {
   body: JSON.stringify({ username: "example" }),
   // …
 });
+
+// Alternative ways for Headers
+
+const myHeaders = new Headers();
+myHeaders.append("Content-Type", "application/json");
+
+const response5 = await fetch("https://example.org/post", {
+  method: "POST",
+  headers: myHeaders,
+  body: JSON.stringify({ username: "example" }),
+  // …
+});
+
