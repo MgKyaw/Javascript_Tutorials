@@ -4,3 +4,10 @@ function fetchTimeout(url, init, timeout = 5000) {
     setTimeout(reject, timeout);
   });
 }
+
+// Alternatively, you could use Promise.race():
+
+Promise.race([
+  fetch("/service", { method: "GET" }),
+  new Promise((resolve) => setTimeout(resolve, 5000)),
+]).then((res) => console.log(res));
