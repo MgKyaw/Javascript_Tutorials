@@ -15,5 +15,6 @@ async function getData() {
 
 const response = await fetch("https://example.org/post", {
   method: "POST",
+  body: JSON.stringify({ username: "example" }),
   // …
 });
