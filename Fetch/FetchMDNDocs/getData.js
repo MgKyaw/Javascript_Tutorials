@@ -53,3 +53,14 @@ console.log(response1.status);
 
 const response2 = await fetch(request2);
 console.log(response2.status);
+
+// Setting headers
+
+const response3 = await fetch("https://example.org/post", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify({ username: "example" }),
+  // …
+});
