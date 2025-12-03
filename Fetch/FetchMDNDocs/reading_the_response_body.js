@@ -26,3 +26,21 @@ async function setImage() {
     console.error(e);
   }
 }
+
+const url2 = "https://www.example.org/a-large-file.txt";
+
+async function fetchTextAsStream(url) {
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`Response status: ${response.status}`);
+    }
+
+    const stream = response.body.pipeThrough(new TextDecoderStream());
+    for await (const value of stream) {
+      console.log(value);
+    }
+  } catch (e) {
+    console.error(e);
+  }
+}
