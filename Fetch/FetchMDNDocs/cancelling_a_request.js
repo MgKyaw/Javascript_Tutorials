@@ -18,3 +18,16 @@ cancelButton.addEventListener("click", () => {
   controller.abort();
   console.log("Canceled fetch");
 });
+
+async function get() {
+  const controller = new AbortController();
+  const request = new Request("https://example.org/get", {
+    signal: controller.signal,
+  });
+
+  const response = await fetch(request);
+  controller.abort();
+  // The next line will throw `AbortError`
+  const text = await response.text();
+  console.log(text);
+}
