@@ -1,3 +1,5 @@
+// If you do need to read the body more than once, you must call Response.clone() before reading the body:
+
 async function getData() {
   const url = "https://example.org/products.json";
   try {
