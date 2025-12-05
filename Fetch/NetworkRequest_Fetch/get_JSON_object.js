@@ -20,3 +20,22 @@ let response2 = await fetch('https://api.github.com/repos/javascript-tutorial/en
 let text = await response2.text(); // read response body as text
 
 alert(text.slice(0, 80) + '...');
+
+// response.blob();
+
+let response3 = await fetch('/article/fetch/logo-fetch.svg');
+
+let blob = await response3.blob(); // download as Blob object
+
+// create <img> for it
+let img = document.createElement('img');
+img.style = 'position:fixed;top:10px;left:10px;width:100px';
+document.body.append(img);
+
+// show it
+img.src = URL.createObjectURL(blob);
+
+setTimeout(() => { // hide after three seconds
+  img.remove();
+  URL.revokeObjectURL(img.src);
+}, 3000);
