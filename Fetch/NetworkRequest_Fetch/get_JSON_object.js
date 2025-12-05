@@ -39,3 +39,8 @@ setTimeout(() => { // hide after three seconds
   img.remove();
   URL.revokeObjectURL(img.src);
 }, 3000);
+
+// Important
+
+let text2 = await response.text(); // response body consumed
+let parsed = await response.json(); // fails (already consumed)
