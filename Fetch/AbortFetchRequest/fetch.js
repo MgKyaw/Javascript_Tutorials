@@ -11,3 +11,5 @@ fetch('https://jsonplaceholder.typicode.com/posts/1')
 var controller = new AbortController();
 var signal = controller.signal;
 
+controller.abort();
+
