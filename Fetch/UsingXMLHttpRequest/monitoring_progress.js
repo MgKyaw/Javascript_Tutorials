@@ -30,3 +30,11 @@ function transferFailed(evt) {
 function transferCanceled(evt) {
   console.log("The transfer has been canceled by the user.");
 }
+
+req.addEventListener("loadend", loadEnd);
+
+function loadEnd(e) {
+  console.log(
+    "The transfer finished (although we don't know if it succeeded or not).",
+  );
+}
