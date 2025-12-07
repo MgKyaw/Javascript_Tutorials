@@ -28,3 +28,15 @@ xhr.onprogress = function(event) {
 xhr.onerror = function() {
   alert("Request failed");
 };
+
+// Once the server has responded, we can receive the result in the following xhr properties:
+
+// status
+// HTTP status code (a number): 200, 404, 403 and so on, can be 0 in case of a non-HTTP failure.
+// statusText
+// HTTP status message (a string): usually OK for 200, Not Found for 404, Forbidden for 403 and so on.
+// response (old scripts may use responseText)
+// The server response body.
+// We can also specify a timeout using the corresponding property:
+
+// xhr.timeout = 10000; // timeout in ms, 10 seconds
