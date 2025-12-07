@@ -18,3 +18,12 @@ function ifHasChanged(URL, callback) {
   req.onload = getHeaderTime;
   req.send();
 }
+
+// Let's test the file "your-page.html"
+ifHasChanged("your-page.html", function (modified, visit) {
+  console.log(
+    `The page '${this.filepath}' has been changed on ${new Date(
+      modified,
+    ).toLocaleString()}!`,
+  );
+});
