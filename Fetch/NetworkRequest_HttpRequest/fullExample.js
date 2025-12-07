@@ -46,3 +46,13 @@ url.searchParams.set('q', 'test me!');
 
 // the parameter 'q' is encoded
 xhr.open('GET', url); // https://google.com/search?q=test+me%21
+
+// Response Type
+// We can use xhr.responseType property to set the response format:
+
+// "" (default) – get as string,
+// "text" – get as string,
+// "arraybuffer" – get as ArrayBuffer (for binary data, see chapter ArrayBuffer, binary arrays),
+// "blob" – get as Blob (for binary data, see chapter Blob),
+// "document" – get as XML document (can use XPath and other XML methods) or HTML document (based on the MIME type of the received data),
+// "json" – get as JSON (parsed automatically).
