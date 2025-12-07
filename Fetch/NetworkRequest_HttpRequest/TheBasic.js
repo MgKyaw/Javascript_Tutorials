@@ -8,3 +8,5 @@ xhr.open(method, URL, [async, user, password])
 // URL – the URL to request, a string, can be URL object.
 // async – if explicitly set to false, then the request is synchronous, we’ll cover that a bit later.
 // user, password – login and password for basic HTTP auth (if required).
+
+xhr.send([body])
