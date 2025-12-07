@@ -40,3 +40,9 @@ xhr.onerror = function() {
 // We can also specify a timeout using the corresponding property:
 
 // xhr.timeout = 10000; // timeout in ms, 10 seconds
+
+let url = new URL('https://google.com/search');
+url.searchParams.set('q', 'test me!');
+
+// the parameter 'q' is encoded
+xhr.open('GET', url); // https://google.com/search?q=test+me%21
