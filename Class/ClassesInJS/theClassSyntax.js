@@ -21,3 +21,6 @@ class User {
 // Usage:
 let user = new User("John");
 user.sayHi();
+
+// proof: User is a function
+alert(typeof User); // function
