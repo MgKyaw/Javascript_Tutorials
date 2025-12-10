@@ -68,3 +68,9 @@ class User {
 
 alert(typeof User); // function
 User(); // Error: Class constructor User cannot be invoked without 'new'
+
+class User {
+  constructor() {}
+}
+
+alert(User); // class User { ... }
