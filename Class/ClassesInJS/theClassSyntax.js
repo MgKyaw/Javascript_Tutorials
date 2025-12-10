@@ -61,3 +61,16 @@ User.prototype.sayHi = function() {
 // Usage:
 let user2 = new User("John");
 user2.sayHi();
+
+class User {
+  constructor() {}
+}
+
+alert(typeof User); // function
+User(); // Error: Class constructor User cannot be invoked without 'new'
+
+class User {
+  constructor() {}
+}
+
+alert(User); // class User { ... }
