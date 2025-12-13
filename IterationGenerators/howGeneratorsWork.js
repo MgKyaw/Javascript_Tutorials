@@ -12,3 +12,8 @@ function* sequence() {
 }
 
 var seq = sequence();
+
+console.log(seq.next());
+// Console output
+// First!
+// {value: 1, done: false}
