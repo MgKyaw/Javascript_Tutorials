@@ -8,3 +8,10 @@ function positiveInts(n) {
       }
    }
 }
+
+var seq = positiveInts(3);
+
+seq.next(); // {value: 1, done: false}
+seq.next(); // {value: 2, done: false}
+seq.next(); // {value: 3, done: false}
+seq.next(); // {value: undefined, done: true}
