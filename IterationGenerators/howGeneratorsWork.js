@@ -17,3 +17,8 @@ console.log(seq.next());
 // Console output
 // First!
 // {value: 1, done: false}
+
+console.log(seq.next());
+// Console output
+// Second!
+// {value: 3, done: false}
