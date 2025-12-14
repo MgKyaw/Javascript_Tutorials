@@ -26,3 +26,7 @@ console.log(seq.next());
 console.log(seq.next());
 // Third!
 // {value: 5, done: false}
+
+console.log(seq.next());
+// Done!
+// {value: undefined, done: true}
