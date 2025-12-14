@@ -10,3 +10,4 @@ console.log(seq.next()); // first time
 // {value: 1, done: false}
 
 console.log(seq.next()); // second time
+// {value: 2, done: false}
