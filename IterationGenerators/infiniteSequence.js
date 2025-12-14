@@ -1,6 +1,6 @@
 function* positiveInts() {
    for (var i = 0; true; i++) {
-      yield i;
+      yield i; // execution resumes right from here
    }
 }
 
