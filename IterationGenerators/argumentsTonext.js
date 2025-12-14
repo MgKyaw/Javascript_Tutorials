@@ -17,3 +17,5 @@ function* gen() {
 var seq = gen();
 seq.next(); // first time
 // {value: 30, done: false}
+
+seq.next(10); // second time
