@@ -22,3 +22,7 @@ console.log(seq.next());
 // Console output
 // Second!
 // {value: 3, done: false}
+
+console.log(seq.next());
+// Third!
+// {value: 5, done: false}
