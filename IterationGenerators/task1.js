@@ -5,3 +5,9 @@ function* gen() {
 }
 
 var seq = gen();
+
+// what will each of these return?
+seq.next(15);
+seq.next(60);
+seq.next(32);
+seq.next(4);
