@@ -7,3 +7,4 @@ function* positiveInts() {
 var seq = positiveInts();
 
 console.log(seq.next()); // first time
+// {value: 1, done: false}
