@@ -1,0 +1,7 @@
+<!-- all dependencies are fetched (analytics.js), and the script runs -->
+<!-- doesn't wait for the document or other <script> tags -->
+<script async type="module">
+  import {counter} from './analytics.js';
+
+  counter.count();
+</script>
