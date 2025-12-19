@@ -9,3 +9,9 @@ import User from './user.js';
 export {User};
 
 ///////
+
+// re-export login/logout
+export {login, logout} from './helpers.js';
+
+// re-export the default export as User
+export {default as User} from './user.js';
