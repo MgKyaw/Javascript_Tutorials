@@ -6,3 +6,7 @@ export function hi() {
 export function bye() {
   alert(`Bye`);
 }
+
+export default function() {
+  alert("Module loaded (export default)!");
+}
