@@ -1,0 +1,5 @@
+{
+  "imports": {
+    "https://www.unpkg.com/moment/": "/node_modules/moment/"
+  }
+}
