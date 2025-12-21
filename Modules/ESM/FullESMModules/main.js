@@ -5,6 +5,9 @@ import { name as squareName, draw } from "./shapes/square.js";
 import { name as squareNameOne } from "shapes";
 import { name as squareNameTwo } from "shapes/square";
 
+// Remap a URL as a prefix ( https://example.com/shapes/)
+import { name as squareNameFour } from "https://example.com/shapes/moduleshapes/square.js";
+
 // Remap a URL to another URL
 import { name as squareNameThree } from "https://example.com/shapes/square.js";
 
