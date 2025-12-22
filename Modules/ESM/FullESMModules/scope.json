@@ -1,0 +1,10 @@
+{
+  "imports": {
+    "cool-module": "/node_modules/cool-module/index.js"
+  },
+  "scopes": {
+    "/node_modules/dependency/": {
+      "cool-module": "/node_modules/some/other/location/cool-module/index.js"
+    }
+  }
+}
