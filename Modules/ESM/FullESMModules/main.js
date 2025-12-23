@@ -11,6 +11,10 @@ import { name as squareNameFour } from "https://example.com/shapes/moduleshapes/
 // Remap a URL to another URL
 import { name as squareNameThree } from "https://example.com/shapes/square.js";
 
+import randomSquare from "./modules/square.js";
+
+import { default as randomSquare } from "./modules/square.js";
+
 const myCanvas = create("myCanvas", document.body, 480, 320);
 const reportList = createReportList(myCanvas.id);
 
