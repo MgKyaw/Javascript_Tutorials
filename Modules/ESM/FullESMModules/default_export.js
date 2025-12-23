@@ -1,1 +1,5 @@
-export default randomSquare;
+// export default randomSquare;
+
+export default function (ctx) {
+  // …
+}
