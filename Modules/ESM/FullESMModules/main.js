@@ -15,9 +15,16 @@ import randomSquare from "./modules/square.js";
 
 import { default as randomSquare } from "./modules/square.js";
 
+import { Square } from "./modules/square.js";
+
 const myCanvas = create("myCanvas", document.body, 480, 320);
 const reportList = createReportList(myCanvas.id);
 
 const square = draw(myCanvas.ctx, 50, 50, 100, "blue");
 reportArea(square.length, reportList);
 reportPerimeter(square.length, reportList);
+
+const square2 = new Square(myCanvas.ctx, myCanvas.listId, 50, 50, 100, "blue");
+square2.draw();
+square2.reportArea();
+square2.reportPerimeter();
