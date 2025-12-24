@@ -15,6 +15,8 @@ import randomSquare from "./modules/square.js";
 
 import { default as randomSquare } from "./modules/square.js";
 
+import { Square } from "./modules/square.js";
+
 const myCanvas = create("myCanvas", document.body, 480, 320);
 const reportList = createReportList(myCanvas.id);
 
