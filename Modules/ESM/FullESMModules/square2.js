@@ -9,3 +9,5 @@ class Square {
 
   // …
 }
+
+export { Square };
