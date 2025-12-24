@@ -23,3 +23,8 @@ const reportList = createReportList(myCanvas.id);
 const square = draw(myCanvas.ctx, 50, 50, 100, "blue");
 reportArea(square.length, reportList);
 reportPerimeter(square.length, reportList);
+
+const square2 = new Square(myCanvas.ctx, myCanvas.listId, 50, 50, 100, "blue");
+square2.draw();
+square2.reportArea();
+square2.reportPerimeter();
