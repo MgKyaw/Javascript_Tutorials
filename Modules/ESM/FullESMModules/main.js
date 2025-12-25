@@ -28,3 +28,5 @@ const square2 = new Square(myCanvas.ctx, myCanvas.listId, 50, 50, 100, "blue");
 square2.draw();
 square2.reportArea();
 square2.reportPerimeter();
+
+const squareBtn = document.querySelector(".square");
