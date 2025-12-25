@@ -30,3 +30,20 @@ square2.reportArea();
 square2.reportPerimeter();
 
 const squareBtn = document.querySelector(".square");
+
+squareBtn.addEventListener("click", () => {
+  import("./modules/square.js").then((Module) => {
+    const square = new Module.Square(
+      myCanvas.ctx,
+      myCanvas.listId,
+      50,
+      50,
+      100,
+      "blue",
+    );
+    square.draw();
+    square.reportArea();
+    square.reportPerimeter();
+  });
+});
+
