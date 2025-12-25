@@ -3,6 +3,13 @@ import { Canvas } from "./modules/canvas.js";
 
 const circleBtn = document.querySelector(".circle");
 
+// …
+const myCanvas = new Canvas("myCanvas", document.body, 480, 320);
+myCanvas.create();
+import { Canvas } from "./modules/canvas.js";
+myCanvas.createReportList();
+// …
+
 const square = new Module.Square(
   myCanvas.ctx,
   myCanvas.listId,
