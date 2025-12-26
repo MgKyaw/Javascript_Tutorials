@@ -1,1 +1,3 @@
-let user = "John";
+//let user = "John";
+
+export let user = "John";
