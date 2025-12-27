@@ -1,0 +1,11 @@
+// // 📁 admin.js
+// export let admin = {
+//   name: "John"
+// };
+
+// 📁 admin.js
+export let config = { };
+
+export function sayHi() {
+  alert(`Ready to serve, ${config.user}!`);
+}
