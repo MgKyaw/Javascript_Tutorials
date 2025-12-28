@@ -1,0 +1,12 @@
+<!-- Old browsers do not understand type="module". 
+ Scripts of an unknown type are just ignored. 
+ For them, it’s possible to provide a fallback using the nomodule attribute: -->
+
+<script type="module">
+  alert("Runs in modern browsers");
+</script>
+
+<script nomodule>
+  alert("Modern browsers know both type=module and nomodule, so skip this")
+  alert("Old browsers ignore script with unknown type=module, but execute this.");
+</script>
