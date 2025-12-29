@@ -17,3 +17,12 @@ readFile('./foo.txt', (err, source) => {
     console.log(source);
   }
 });
+
+import fs, { readFileSync } from 'node:fs';
+import { syncBuiltinESMExports } from 'node:module';
+import { Buffer } from 'node:buffer';
+
+fs.readFileSync = () => Buffer.from('Hello, ESM');
+syncBuiltinESMExports();
+
+fs.readFileSync === readFileSync;
