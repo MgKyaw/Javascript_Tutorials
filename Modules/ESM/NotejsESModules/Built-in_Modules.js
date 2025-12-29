@@ -5,3 +5,6 @@
 // The default export can be used for, among other things, modifying the named exports. 
 // Named exports of built-in modules are updated only 
 // by calling module.syncBuiltinESMExports().
+
+import EventEmitter from 'node:events';
+const e = new EventEmitter();
