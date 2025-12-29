@@ -8,3 +8,12 @@
 
 import EventEmitter from 'node:events';
 const e = new EventEmitter();
+
+import { readFile } from 'node:fs';
+readFile('./foo.txt', (err, source) => {
+  if (err) {
+    console.error(err);
+  } else {
+    console.log(source);
+  }
+});
