@@ -28,3 +28,10 @@
 
 import { readFileSync } from 'node:fs';
 const buffer = readFileSync(new URL('./data.proto', import.meta.url)); 
+
+// import.meta.main#
+
+// Type: <boolean> true when the current module is the entry point of the current process; false otherwise.
+// Equivalent to require.main === module in CommonJS.
+
+// Analogous to Python's __name__ == "__main__".
