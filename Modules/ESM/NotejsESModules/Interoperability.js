@@ -9,3 +9,11 @@ console.log(cjs === cjsSugar);
 // Prints:
 //   <module.exports>
 //   true
+
+
+import * as m from 'cjs';
+console.log(m);
+console.log(m === await import('cjs'));
+// Prints:
+//   [Module] { default: <module.exports>, 'module.exports': <module.exports> }
+//   true
