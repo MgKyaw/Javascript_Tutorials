@@ -35,3 +35,15 @@ const buffer = readFileSync(new URL('./data.proto', import.meta.url));
 // Equivalent to require.main === module in CommonJS.
 
 // Analogous to Python's __name__ == "__main__".
+
+export function foo() {
+  return 'Hello, world';
+}
+
+function main() {
+  const message = foo();
+  console.log(message);
+}
+
+if (import.meta.main) main();
+// `foo` can be imported from another module without possible side-effects from `main` 
