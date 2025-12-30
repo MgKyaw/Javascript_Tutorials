@@ -54,3 +54,8 @@ if (import.meta.main) main();
 // Returns: <string> The absolute URL string that the specifier would resolve to.
 
 // import.meta.resolve is a module-relative resolution function scoped to each module, returning the URL string.
+
+const dependencyAsset = import.meta.resolve('component-lib/asset.css');
+// file:///app/node_modules/component-lib/asset.css
+import.meta.resolve('./dep.js');
+// file:///app/dep.js
