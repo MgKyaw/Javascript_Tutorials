@@ -47,3 +47,10 @@ function main() {
 
 if (import.meta.main) main();
 // `foo` can be imported from another module without possible side-effects from `main` 
+
+// import.meta.resolve(specifier)#
+
+// specifier <string> The module specifier to resolve relative to the current module.
+// Returns: <string> The absolute URL string that the specifier would resolve to.
+
+// import.meta.resolve is a module-relative resolution function scoped to each module, returning the URL string.
