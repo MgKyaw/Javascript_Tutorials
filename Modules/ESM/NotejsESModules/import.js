@@ -19,3 +19,12 @@
 // This is the same as the url.fileURLToPath() of the import.meta.url.
 
 // Caveat only local modules support this property. Modules not using the file: protocol will not provide it.
+
+// import.meta.url#
+// Type: <string> The absolute file: URL of the module.
+// This is defined exactly the same as it is in browsers providing the URL of the current module file.
+
+// This enables useful patterns such as relative file loading:
+
+import { readFileSync } from 'node:fs';
+const buffer = readFileSync(new URL('./data.proto', import.meta.url)); 
