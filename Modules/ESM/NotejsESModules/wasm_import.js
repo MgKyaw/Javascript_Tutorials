@@ -4,3 +4,6 @@
 
 // const instance2 = await WebAssembly.instantiate(libraryModule, importObject2);
 
+const dynamicLibrary = await import.source('./library.wasm');
+
+const instance = await WebAssembly.instantiate(dynamicLibrary, importObject);
