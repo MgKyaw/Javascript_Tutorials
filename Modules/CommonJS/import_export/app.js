@@ -13,3 +13,6 @@ console.log(functions.add(1, 2));
 const { add } = require("./functions.js");
 
 console.log(add(1, 2));
+
+// Output 
+// 3
