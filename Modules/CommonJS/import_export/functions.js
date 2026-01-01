@@ -26,3 +26,7 @@ console.log(module);
 //   [Symbol(kFormat)]: undefined,
 //   [Symbol(kIsExecuting)]: true
 // }
+
+module.exports.add = add;
+
+console.log(module);
