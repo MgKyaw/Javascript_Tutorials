@@ -9,3 +9,7 @@ console.log(functions.add(1, 2));
 
 // Output 
 // 3
+
+const { add } = require("./functions.js");
+
+console.log(add(1, 2));
