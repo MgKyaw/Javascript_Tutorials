@@ -23,3 +23,11 @@ console.log(newName(1, 2));
 
 // Output 
 // 3
+
+// To import the exported anonymous function
+const add = require("./functions.js");
+
+console.log(add(1, 2));
+
+// Output 
+// 3
