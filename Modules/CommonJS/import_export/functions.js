@@ -27,8 +27,8 @@ console.log(module);
 //   [Symbol(kIsExecuting)]: true
 // }
 
-module.exports.add = add;
-module.exports.name = "Test";
+// module.exports.add = add;
+// module.exports.name = "Test";
 
 console.log(module);
 // Output
@@ -55,6 +55,14 @@ console.log(module);
 //   [Symbol(kIsExecuting)]: true
 // }
 
-module.exports.name = "Test";
+//module.exports.name = "Test";
 
 console.log(module);
+
+// module.exports.add = add;
+// module.exports.name = "Test";
+module.exports = (num1, num2) => num1 + num2;
+console.log(module);
+
+// Output 
+// exports: [Function (anonymous)],
