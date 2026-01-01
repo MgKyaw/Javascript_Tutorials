@@ -28,6 +28,7 @@ console.log(module);
 // }
 
 module.exports.add = add;
+module.exports.name = "";
 
 console.log(module);
 // Output
