@@ -1,0 +1,33 @@
+console.log(require("./functions.js"));
+
+// Output
+// { add: [Function: add] }
+
+const functions = require("./functions.js");
+
+console.log(functions.add(1, 2));
+
+// Output 
+// 3
+
+const { add } = require("./functions.js");
+
+console.log(add(1, 2));
+
+// Output 
+// 3
+
+const { add: newName } = require("./functions.js");
+
+console.log(newName(1, 2));
+
+// Output 
+// 3
+
+// To import the exported anonymous function
+const add = require("./functions.js");
+
+console.log(add(1, 2));
+
+// Output 
+// 3
