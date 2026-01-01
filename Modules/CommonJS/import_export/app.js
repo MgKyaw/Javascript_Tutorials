@@ -6,3 +6,6 @@ console.log(require("./functions.js"));
 const functions = require("./functions.js");
 
 console.log(functions.add(1, 2));
+
+// Output 
+// 3
