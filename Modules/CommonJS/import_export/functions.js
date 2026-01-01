@@ -28,7 +28,7 @@ console.log(module);
 // }
 
 module.exports.add = add;
-module.exports.name = "";
+module.exports.name = "Test";
 
 console.log(module);
 // Output
@@ -54,3 +54,7 @@ console.log(module);
 //   [Symbol(kFormat)]: undefined,
 //   [Symbol(kIsExecuting)]: true
 // }
+
+module.exports.name = "Test";
+
+console.log(module);
