@@ -16,3 +16,10 @@ console.log(add(1, 2));
 
 // Output 
 // 3
+
+const { add: newName } = require("./functions.js");
+
+console.log(newName(1, 2));
+
+// Output 
+// 3
