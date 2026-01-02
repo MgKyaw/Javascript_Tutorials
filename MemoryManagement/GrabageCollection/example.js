@@ -11,3 +11,11 @@ user = null;
 // Object name: "John" loses it's pointer => becomes unused object
 // Now John becomes unreachable. There’s no way to access it, no references to it. Garbage collector will junk the data and free the memory.
 
+user = {
+  name: "John"
+};
+
+let admin = user;
+
+//    <global>   user ->  object name: "John"
+//    <global>   admin ->  object name: "John"
