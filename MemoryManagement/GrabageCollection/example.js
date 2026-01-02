@@ -19,3 +19,7 @@ let admin = user;
 
 //    <global>   user ->  object name: "John"
 //    <global>   admin ->  object name: "John"
+
+user = null;
+
+//Then the object is still reachable via admin global variable, so it must stay in memory. If we overwrite admin too, then it can be removed.
