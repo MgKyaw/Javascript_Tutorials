@@ -2,3 +2,5 @@
 let user = {
   name: "John"
 };
+
+// <global> user => Object name: "John"
