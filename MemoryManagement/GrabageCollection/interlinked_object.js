@@ -27,3 +27,14 @@ delete family.mother.husband;
 //The source object is the same as above. Then:
 
 family = null;
+
+// Internal algorithms
+// The basic garbage collection algorithm is called “mark-and-sweep”.
+
+// The following “garbage collection” steps are regularly performed:
+
+// The garbage collector takes roots and “marks” (remembers) them.
+// Then it visits and “marks” all references from them.
+// Then it visits marked objects and marks their references. All visited objects are remembered, so as not to visit the same object twice in the future.
+// …And so on until every reachable (from the roots) references are visited.
+// All objects except marked ones are removed.
