@@ -28,3 +28,14 @@ y = "mozilla";
 z = null;
 // The 'a' property of the object originally in x
 // has zero references to it. It can be garbage collected.
+
+function f() {
+  const x = {};
+  const y = {};
+  x.a = y; // x references y
+  y.a = x; // y references x
+
+  return "azerty";
+}
+
+f();
