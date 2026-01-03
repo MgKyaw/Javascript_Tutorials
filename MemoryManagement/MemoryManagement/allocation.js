@@ -18,3 +18,7 @@ function f(a) {
 someElement.addEventListener("click", () => {
   someElement.style.backgroundColor = "blue";
 });
+
+const d = new Date(); // allocates a Date object
+
+const e = document.createElement("div"); // allocates a DOM element
