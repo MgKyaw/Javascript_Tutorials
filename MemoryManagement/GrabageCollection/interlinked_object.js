@@ -38,3 +38,11 @@ family = null;
 // Then it visits marked objects and marks their references. All visited objects are remembered, so as not to visit the same object twice in the future.
 // …And so on until every reachable (from the roots) references are visited.
 // All objects except marked ones are removed.
+
+// Summary
+// The main things to know:
+
+// Garbage collection is performed automatically. We cannot force or prevent it.
+// Objects are retained in memory while they are reachable.
+// Being referenced is not the same as being reachable (from a root): a pack of interlinked objects can become unreachable as a whole, as we’ve seen in the example above.
+// Modern engines implement advanced algorithms of garbage collection.
