@@ -1,0 +1,16 @@
+<ul>
+  <li>1</li>
+  <li>2</li>
+  <li>3</li>
+</ul>
+<button id="remove">Remove list</button>
+<script>
+var list = document.querySelector("ul")
+list.style.background = "yellow"
+
+document.getElementById("remove").addEventListener("click", () => {
+  document.body.innerHTML = "Empty"
+});
+</script>
+
+<!-- To fix this issue we can set list to undefined and let the garbage collector remove the unused nodes. -->

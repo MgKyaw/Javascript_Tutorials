@@ -1,0 +1,18 @@
+<button id="grow">Click me</button>
+<button id="remove">Remove me</button>
+<script>
+var x = [];
+
+function grow() {
+  for (var i = 0; i < 10000; i++) {
+    document.body.appendChild(document.createElement("div"));
+  }
+  x.push(new Array(1000000).join("x"));
+}
+
+document.getElementById("grow").addEventListener("click", grow);
+document.getElementById("remove").addEventListener("click", () => {
+  window.x = null;
+  document.body.innerHTML = "yep";
+});
+</script>
